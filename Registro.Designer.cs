@@ -92,6 +92,7 @@ namespace CrearOtroRegistro
             this.textBoxClaveConfirm.Location = new System.Drawing.Point(365, 218);
             this.textBoxClaveConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxClaveConfirm.Name = "textBoxClaveConfirm";
+            this.textBoxClaveConfirm.PasswordChar = '*';
             this.textBoxClaveConfirm.Size = new System.Drawing.Size(151, 23);
             this.textBoxClaveConfirm.TabIndex = 41;
             this.textBoxClaveConfirm.TextChanged += new System.EventHandler(this.textBoxClaveConfirm_TextChanged_1);
@@ -164,6 +165,7 @@ namespace CrearOtroRegistro
             this.textBoxClave.Location = new System.Drawing.Point(96, 218);
             this.textBoxClave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxClave.Name = "textBoxClave";
+            this.textBoxClave.PasswordChar = '*';
             this.textBoxClave.Size = new System.Drawing.Size(128, 23);
             this.textBoxClave.TabIndex = 35;
             this.textBoxClave.TextChanged += new System.EventHandler(this.textBoxClave_TextChanged_1);
@@ -216,7 +218,7 @@ namespace CrearOtroRegistro
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 226);
+            this.label4.Location = new System.Drawing.Point(34, 221);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 15);
             this.label4.TabIndex = 29;
@@ -225,7 +227,7 @@ namespace CrearOtroRegistro
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 178);
+            this.label3.Location = new System.Drawing.Point(34, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 15);
             this.label3.TabIndex = 28;
@@ -234,7 +236,7 @@ namespace CrearOtroRegistro
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 137);
+            this.label2.Location = new System.Drawing.Point(34, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 15);
             this.label2.TabIndex = 27;
@@ -243,7 +245,7 @@ namespace CrearOtroRegistro
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 81);
+            this.label1.Location = new System.Drawing.Point(34, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 15);
             this.label1.TabIndex = 26;
@@ -254,7 +256,7 @@ namespace CrearOtroRegistro
             this.Editar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
             this.Editar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Editar.Location = new System.Drawing.Point(313, 272);
+            this.Editar.Location = new System.Drawing.Point(327, 272);
             this.Editar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Editar.Name = "Editar";
             this.Editar.Size = new System.Drawing.Size(72, 65);
@@ -269,7 +271,7 @@ namespace CrearOtroRegistro
             this.Guardar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Guardar.Image = ((System.Drawing.Image)(resources.GetObject("Guardar.Image")));
             this.Guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardar.Location = new System.Drawing.Point(195, 272);
+            this.Guardar.Location = new System.Drawing.Point(208, 272);
             this.Guardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(78, 65);
@@ -284,10 +286,10 @@ namespace CrearOtroRegistro
             this.Nuevo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Nuevo.Image = ((System.Drawing.Image)(resources.GetObject("Nuevo.Image")));
             this.Nuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevo.Location = new System.Drawing.Point(77, 272);
+            this.Nuevo.Location = new System.Drawing.Point(96, 272);
             this.Nuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Nuevo.Name = "Nuevo";
-            this.Nuevo.Size = new System.Drawing.Size(83, 65);
+            this.Nuevo.Size = new System.Drawing.Size(74, 65);
             this.Nuevo.TabIndex = 23;
             this.Nuevo.Text = "Nuevo";
             this.Nuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -302,7 +304,7 @@ namespace CrearOtroRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 371);
+            this.ClientSize = new System.Drawing.Size(672, 354);
             this.Controls.Add(this.idNumerico);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dateTimePicker1);

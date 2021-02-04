@@ -15,7 +15,7 @@ namespace CrearOtroRegistro.Entidades
         public string Nombres { get; set; }
         public string Email { get; set; }
         public string DescripcionRol { get; set; }
-        public bool Activo { get; set; }
+        public bool Activo { get; set; } = false;
 
         public Usuarios()
         {
