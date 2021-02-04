@@ -24,41 +24,41 @@ namespace CrearOtroRegistro
         private void Limpiar()
         {
             idNumerico.Value = 0;
-            textBoxNombres.Clear();
-            textBoxAlias.Clear();
-            textBoxClaveConfirm.Clear();
-            textBoxEmail.Clear();
+            NombrestextBox.Clear();
+            AliastextBox.Clear();
+            ClaveConfirmtextBox.Clear();
+            EmailtextBox.Clear();
             errorProvider1.Clear();
             FechadateTimePicker1.CustomFormat = " ";
-            textBoxClave.Clear();
-            checkBoxActivo.Checked = false;
-            comboBoxRol.Text = "Seleccionar";
+            ClavetextBox.Clear();
+            ActivocheckBox.Checked = false;
+            RolcomboBox.Text = "Seleccionar";
         }
 
         private void LlenaCampo(Usuarios usuarios)
         {
             idNumerico.Value = usuarios.UsuarioId;
-            textBoxNombres.Text = usuarios.Nombres;
-            textBoxEmail.Text = usuarios.Email;
-            textBoxAlias.Text = usuarios.Alias;
-            comboBoxRol.Text = usuarios.DescripcionRol;
-            textBoxClave.Text = usuarios.Clave;
+            NombrestextBox.Text = usuarios.Nombres;
+            EmailtextBox.Text = usuarios.Email;
+            AliastextBox.Text = usuarios.Alias;
+            RolcomboBox.Text = usuarios.DescripcionRol;
+            ClavetextBox.Text = usuarios.Clave;
             FechadateTimePicker1.Value = usuarios.FechaIngreso;
-            checkBoxActivo.Checked = usuarios.Activo;
-            textBoxClaveConfirm.Text = usuarios.Clave;
+            ActivocheckBox.Checked = usuarios.Activo;
+            ClaveConfirmtextBox.Text = usuarios.Clave;
         }
 
         private Usuarios LlenaClase()
         {
             Usuarios usuarios = new Usuarios();
             usuarios.UsuarioId = (int)idNumerico.Value;
-            usuarios.Clave = textBoxClave.Text;
-            usuarios.Email = textBoxEmail.Text;
-            usuarios.Nombres = textBoxNombres.Text;
+            usuarios.Clave = ClavetextBox.Text;
+            usuarios.Email = EmailtextBox.Text;
+            usuarios.Nombres = NombrestextBox.Text;
             usuarios.FechaIngreso = FechadateTimePicker1.Value;
-            usuarios.Alias = textBoxAlias.Text;
-            usuarios.DescripcionRol = comboBoxRol.Text;
-            usuarios.Activo = checkBoxActivo.Checked;
+            usuarios.Alias = AliastextBox.Text;
+            usuarios.DescripcionRol = RolcomboBox.Text;
+            usuarios.Activo = ActivocheckBox.Checked;
 
             return usuarios;
         }
@@ -73,41 +73,41 @@ namespace CrearOtroRegistro
         private bool Validar()
         {
             bool paso = true;
-            if (textBoxNombres.Text == string.Empty)
+            if (NombrestextBox.Text == string.Empty)
             {
-                errorProvider1.SetError(textBoxNombres, "El campo nombre no puede estar vacio");
-                textBoxNombres.Focus();
+                errorProvider1.SetError(NombrestextBox, "El campo nombre no puede estar vacio");
+                NombrestextBox.Focus();
                 paso = false;
             }
 
-            if (string.IsNullOrWhiteSpace(textBoxEmail.Text))
+            if (string.IsNullOrWhiteSpace(EmailtextBox.Text))
             {
-                errorProvider1.SetError(textBoxEmail, "El Email no puede estar vacio");
-                textBoxEmail.Focus();
+                errorProvider1.SetError(EmailtextBox, "El Email no puede estar vacio");
+                EmailtextBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(textBoxAlias.Text))
+            if (string.IsNullOrWhiteSpace(AliastextBox.Text))
             {
-                errorProvider1.SetError(textBoxAlias, "El campo Alias no puede estar vacio");
-                textBoxAlias.Focus();
+                errorProvider1.SetError(AliastextBox, "El campo Alias no puede estar vacio");
+                AliastextBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(comboBoxRol.Text))
+            if (string.IsNullOrWhiteSpace(RolcomboBox.Text))
             {
-                errorProvider1.SetError(comboBoxRol, "Debe agregar un rol especifico");
-                comboBoxRol.Focus();
+                errorProvider1.SetError(RolcomboBox, "Debe agregar un rol especifico");
+                RolcomboBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(textBoxClave.Text))
+            if (string.IsNullOrWhiteSpace(ClavetextBox.Text))
             {
-                errorProvider1.SetError(textBoxClave, "Debe asignar una clave a su usuario");
-                textBoxClave.Focus();
+                errorProvider1.SetError(ClavetextBox, "Debe asignar una clave a su usuario");
+                ClavetextBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(textBoxClaveConfirm.Text))
+            if (string.IsNullOrWhiteSpace(ClaveConfirmtextBox.Text))
             {
-                errorProvider1.SetError(textBoxClaveConfirm, "Debe confirmar la clave");
-                textBoxClaveConfirm.Focus();
+                errorProvider1.SetError(ClaveConfirmtextBox, "Debe confirmar la clave");
+                ClaveConfirmtextBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(FechadateTimePicker1.Text))
@@ -116,9 +116,9 @@ namespace CrearOtroRegistro
                 FechadateTimePicker1.Focus();
                 paso = false;
             }
-            if (textBoxClave.Text != textBoxClaveConfirm.Text)
+            if (ClavetextBox.Text != ClaveConfirmtextBox.Text)
             {
-                errorProvider1.SetError(textBoxClaveConfirm, "La contraseña debe ser igual para ambos casos!");
+                errorProvider1.SetError(ClaveConfirmtextBox, "La contraseña debe ser igual para ambos casos!");
                 paso = false;
             }
             return paso;

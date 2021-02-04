@@ -34,16 +34,16 @@ namespace CrearOtroRegistro
             this.idNumerico = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.FechadateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBoxClaveConfirm = new System.Windows.Forms.TextBox();
+            this.ClaveConfirmtextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.Eliminar = new System.Windows.Forms.Button();
-            this.comboBoxRol = new System.Windows.Forms.ComboBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.RolcomboBox = new System.Windows.Forms.ComboBox();
+            this.EmailtextBox = new System.Windows.Forms.TextBox();
             this.Buscar = new System.Windows.Forms.Button();
-            this.textBoxClave = new System.Windows.Forms.TextBox();
-            this.textBoxNombres = new System.Windows.Forms.TextBox();
-            this.textBoxAlias = new System.Windows.Forms.TextBox();
-            this.checkBoxActivo = new System.Windows.Forms.CheckBox();
+            this.ClavetextBox = new System.Windows.Forms.TextBox();
+            this.NombrestextBox = new System.Windows.Forms.TextBox();
+            this.AliastextBox = new System.Windows.Forms.TextBox();
+            this.ActivocheckBox = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -86,14 +86,14 @@ namespace CrearOtroRegistro
             this.FechadateTimePicker1.TabIndex = 42;
             this.FechadateTimePicker1.ValueChanged += new System.EventHandler(this.FechadateTimePicker1_ValueChanged_1);
             // 
-            // textBoxClaveConfirm
+            // ClaveConfirmtextBox
             // 
-            this.textBoxClaveConfirm.Location = new System.Drawing.Point(365, 218);
-            this.textBoxClaveConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxClaveConfirm.Name = "textBoxClaveConfirm";
-            this.textBoxClaveConfirm.PasswordChar = '*';
-            this.textBoxClaveConfirm.Size = new System.Drawing.Size(151, 23);
-            this.textBoxClaveConfirm.TabIndex = 41;
+            this.ClaveConfirmtextBox.Location = new System.Drawing.Point(365, 218);
+            this.ClaveConfirmtextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClaveConfirmtextBox.Name = "ClaveConfirmtextBox";
+            this.ClaveConfirmtextBox.PasswordChar = '*';
+            this.ClaveConfirmtextBox.Size = new System.Drawing.Size(151, 23);
+            this.ClaveConfirmtextBox.TabIndex = 41;
             
             // 
             // label7
@@ -120,30 +120,30 @@ namespace CrearOtroRegistro
             this.Eliminar.UseVisualStyleBackColor = false;
             this.Eliminar.Click += new System.EventHandler(this.EliminarButton_Click_1);
             // 
-            // comboBoxRol
+            // RolcomboBox
             // 
-            this.comboBoxRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxRol.FormattingEnabled = true;
-            this.comboBoxRol.Items.AddRange(new object[] {
+            this.RolcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RolcomboBox.FormattingEnabled = true;
+            this.RolcomboBox.Items.AddRange(new object[] {
             "Adiministrador",
             "Estudiante",
             "Maestro",
             "Ciudadano",
             "Conserje",
             "Pasante"});
-            this.comboBoxRol.Location = new System.Drawing.Point(519, 137);
-            this.comboBoxRol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxRol.Name = "comboBoxRol";
-            this.comboBoxRol.Size = new System.Drawing.Size(119, 23);
-            this.comboBoxRol.TabIndex = 38;
+            this.RolcomboBox.Location = new System.Drawing.Point(519, 137);
+            this.RolcomboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RolcomboBox.Name = "RolcomboBox";
+            this.RolcomboBox.Size = new System.Drawing.Size(119, 23);
+            this.RolcomboBox.TabIndex = 38;
             // 
-            // textBoxEmail
+            // EmailtextBox
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(364, 175);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(274, 23);
-            this.textBoxEmail.TabIndex = 37;
+            this.EmailtextBox.Location = new System.Drawing.Point(364, 175);
+            this.EmailtextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.EmailtextBox.Name = "EmailtextBox";
+            this.EmailtextBox.Size = new System.Drawing.Size(274, 23);
+            this.EmailtextBox.TabIndex = 37;
             // 
             // Buscar
             // 
@@ -159,42 +159,42 @@ namespace CrearOtroRegistro
             this.Buscar.UseVisualStyleBackColor = false;
             this.Buscar.Click += new System.EventHandler(this.BuscarButton_Click_1);
             // 
-            // textBoxClave
+            // ClavetextBox
             // 
-            this.textBoxClave.Location = new System.Drawing.Point(96, 218);
-            this.textBoxClave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxClave.Name = "textBoxClave";
-            this.textBoxClave.PasswordChar = '*';
-            this.textBoxClave.Size = new System.Drawing.Size(128, 23);
-            this.textBoxClave.TabIndex = 35;
+            this.ClavetextBox.Location = new System.Drawing.Point(96, 218);
+            this.ClavetextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClavetextBox.Name = "ClavetextBox";
+            this.ClavetextBox.PasswordChar = '*';
+            this.ClavetextBox.Size = new System.Drawing.Size(128, 23);
+            this.ClavetextBox.TabIndex = 35;
             
             // 
-            // textBoxNombres
+            // NombrestextBox
             // 
-            this.textBoxNombres.Location = new System.Drawing.Point(96, 175);
-            this.textBoxNombres.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxNombres.Name = "textBoxNombres";
-            this.textBoxNombres.Size = new System.Drawing.Size(225, 23);
-            this.textBoxNombres.TabIndex = 34;
+            this.NombrestextBox.Location = new System.Drawing.Point(96, 175);
+            this.NombrestextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NombrestextBox.Name = "NombrestextBox";
+            this.NombrestextBox.Size = new System.Drawing.Size(225, 23);
+            this.NombrestextBox.TabIndex = 34;
             // 
-            // textBoxAlias
+            // AliastextBox
             // 
-            this.textBoxAlias.Location = new System.Drawing.Point(96, 134);
-            this.textBoxAlias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxAlias.Name = "textBoxAlias";
-            this.textBoxAlias.Size = new System.Drawing.Size(134, 23);
-            this.textBoxAlias.TabIndex = 33;
+            this.AliastextBox.Location = new System.Drawing.Point(96, 134);
+            this.AliastextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AliastextBox.Name = "AliastextBox";
+            this.AliastextBox.Size = new System.Drawing.Size(134, 23);
+            this.AliastextBox.TabIndex = 33;
             // 
-            // checkBoxActivo
+            // ActivocheckBox
             // 
-            this.checkBoxActivo.AutoSize = true;
-            this.checkBoxActivo.Location = new System.Drawing.Point(578, 97);
-            this.checkBoxActivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBoxActivo.Name = "checkBoxActivo";
-            this.checkBoxActivo.Size = new System.Drawing.Size(60, 19);
-            this.checkBoxActivo.TabIndex = 32;
-            this.checkBoxActivo.Text = "Activo";
-            this.checkBoxActivo.UseVisualStyleBackColor = true;
+            this.ActivocheckBox.AutoSize = true;
+            this.ActivocheckBox.Location = new System.Drawing.Point(578, 97);
+            this.ActivocheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ActivocheckBox.Name = "ActivocheckBox";
+            this.ActivocheckBox.Size = new System.Drawing.Size(60, 19);
+            this.ActivocheckBox.TabIndex = 32;
+            this.ActivocheckBox.Text = "Activo";
+            this.ActivocheckBox.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -292,16 +292,16 @@ namespace CrearOtroRegistro
             this.Controls.Add(this.idNumerico);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.FechadateTimePicker1);
-            this.Controls.Add(this.textBoxClaveConfirm);
+            this.Controls.Add(this.ClaveConfirmtextBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Eliminar);
-            this.Controls.Add(this.comboBoxRol);
-            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.RolcomboBox);
+            this.Controls.Add(this.EmailtextBox);
             this.Controls.Add(this.Buscar);
-            this.Controls.Add(this.textBoxClave);
-            this.Controls.Add(this.textBoxNombres);
-            this.Controls.Add(this.textBoxAlias);
-            this.Controls.Add(this.checkBoxActivo);
+            this.Controls.Add(this.ClavetextBox);
+            this.Controls.Add(this.NombrestextBox);
+            this.Controls.Add(this.AliastextBox);
+            this.Controls.Add(this.ActivocheckBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -325,16 +325,16 @@ namespace CrearOtroRegistro
         private System.Windows.Forms.NumericUpDown idNumerico;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker1;
-        private System.Windows.Forms.TextBox textBoxClaveConfirm;
+        private System.Windows.Forms.TextBox ClaveConfirmtextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Eliminar;
-        private System.Windows.Forms.ComboBox comboBoxRol;
-        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.ComboBox RolcomboBox;
+        private System.Windows.Forms.TextBox EmailtextBox;
         private System.Windows.Forms.Button Buscar;
-        private System.Windows.Forms.TextBox textBoxClave;
-        private System.Windows.Forms.TextBox textBoxNombres;
-        private System.Windows.Forms.TextBox textBoxAlias;
-        private System.Windows.Forms.CheckBox checkBoxActivo;
+        private System.Windows.Forms.TextBox ClavetextBox;
+        private System.Windows.Forms.TextBox NombrestextBox;
+        private System.Windows.Forms.TextBox AliastextBox;
+        private System.Windows.Forms.CheckBox ActivocheckBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

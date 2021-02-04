@@ -15,7 +15,7 @@ namespace CrearOtroRegistro.BLL
             if (!Existe(usuario.UsuarioId))
                 return Insertar(usuario);
             else
-                return false;
+                return Insertar(usuario);
         }
         private static bool Insertar(Usuarios usuario)
         {
