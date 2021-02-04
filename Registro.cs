@@ -256,12 +256,12 @@ namespace CrearOtroRegistro
 
         private void textBoxClave_TextChanged_1(object sender, EventArgs e)
         {
-            
+              
         }
 
         private void textBoxClaveConfirm_TextChanged_1(object sender, EventArgs e)
         {
-           
+             
         }
 
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
