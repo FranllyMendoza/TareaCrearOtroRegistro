@@ -33,7 +33,7 @@ namespace CrearOtroRegistro
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.idNumerico = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FechadateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBoxClaveConfirm = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.Eliminar = new System.Windows.Forms.Button();
@@ -50,7 +50,6 @@ namespace CrearOtroRegistro
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Editar = new System.Windows.Forms.Button();
             this.Guardar = new System.Windows.Forms.Button();
             this.Nuevo = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -65,7 +64,7 @@ namespace CrearOtroRegistro
             this.idNumerico.Name = "idNumerico";
             this.idNumerico.Size = new System.Drawing.Size(64, 23);
             this.idNumerico.TabIndex = 44;
-            this.idNumerico.ValueChanged += new System.EventHandler(this.idNumerico_ValueChanged);
+            
             // 
             // label8
             // 
@@ -76,16 +75,16 @@ namespace CrearOtroRegistro
             this.label8.TabIndex = 43;
             this.label8.Text = "Fecha";
             // 
-            // dateTimePicker1
+            // FechadateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = " ";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(365, 137);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(128, 23);
-            this.dateTimePicker1.TabIndex = 42;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
+            this.FechadateTimePicker1.CustomFormat = " ";
+            this.FechadateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechadateTimePicker1.Location = new System.Drawing.Point(365, 137);
+            this.FechadateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FechadateTimePicker1.Name = "FechadateTimePicker1";
+            this.FechadateTimePicker1.Size = new System.Drawing.Size(128, 23);
+            this.FechadateTimePicker1.TabIndex = 42;
+            this.FechadateTimePicker1.ValueChanged += new System.EventHandler(this.FechadateTimePicker1_ValueChanged_1);
             // 
             // textBoxClaveConfirm
             // 
@@ -95,7 +94,7 @@ namespace CrearOtroRegistro
             this.textBoxClaveConfirm.PasswordChar = '*';
             this.textBoxClaveConfirm.Size = new System.Drawing.Size(151, 23);
             this.textBoxClaveConfirm.TabIndex = 41;
-            this.textBoxClaveConfirm.TextChanged += new System.EventHandler(this.textBoxClaveConfirm_TextChanged_1);
+            
             // 
             // label7
             // 
@@ -111,7 +110,7 @@ namespace CrearOtroRegistro
             this.Eliminar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
             this.Eliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminar.Location = new System.Drawing.Point(441, 272);
+            this.Eliminar.Location = new System.Drawing.Point(418, 272);
             this.Eliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(75, 65);
@@ -119,7 +118,7 @@ namespace CrearOtroRegistro
             this.Eliminar.Text = "Eliminar";
             this.Eliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminar.UseVisualStyleBackColor = false;
-            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click_1);
+            this.Eliminar.Click += new System.EventHandler(this.EliminarButton_Click_1);
             // 
             // comboBoxRol
             // 
@@ -158,7 +157,7 @@ namespace CrearOtroRegistro
             this.Buscar.TabIndex = 36;
             this.Buscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Buscar.UseVisualStyleBackColor = false;
-            this.Buscar.Click += new System.EventHandler(this.Buscar_Click_1);
+            this.Buscar.Click += new System.EventHandler(this.BuscarButton_Click_1);
             // 
             // textBoxClave
             // 
@@ -168,7 +167,7 @@ namespace CrearOtroRegistro
             this.textBoxClave.PasswordChar = '*';
             this.textBoxClave.Size = new System.Drawing.Size(128, 23);
             this.textBoxClave.TabIndex = 35;
-            this.textBoxClave.TextChanged += new System.EventHandler(this.textBoxClave_TextChanged_1);
+            
             // 
             // textBoxNombres
             // 
@@ -251,27 +250,12 @@ namespace CrearOtroRegistro
             this.label1.TabIndex = 26;
             this.label1.Text = "Usuario ID";
             // 
-            // Editar
-            // 
-            this.Editar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
-            this.Editar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Editar.Location = new System.Drawing.Point(327, 272);
-            this.Editar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Editar.Name = "Editar";
-            this.Editar.Size = new System.Drawing.Size(72, 65);
-            this.Editar.TabIndex = 25;
-            this.Editar.Text = "Editar";
-            this.Editar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Editar.UseVisualStyleBackColor = false;
-            this.Editar.Click += new System.EventHandler(this.Editar_Click_1);
-            // 
             // Guardar
             // 
             this.Guardar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Guardar.Image = ((System.Drawing.Image)(resources.GetObject("Guardar.Image")));
             this.Guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardar.Location = new System.Drawing.Point(208, 272);
+            this.Guardar.Location = new System.Drawing.Point(276, 272);
             this.Guardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(78, 65);
@@ -279,14 +263,14 @@ namespace CrearOtroRegistro
             this.Guardar.Text = "Guardar";
             this.Guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Guardar.UseVisualStyleBackColor = false;
-            this.Guardar.Click += new System.EventHandler(this.Guardar_Click_1);
+            this.Guardar.Click += new System.EventHandler(this.GuardarButton_Click_1);
             // 
             // Nuevo
             // 
             this.Nuevo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Nuevo.Image = ((System.Drawing.Image)(resources.GetObject("Nuevo.Image")));
             this.Nuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevo.Location = new System.Drawing.Point(96, 272);
+            this.Nuevo.Location = new System.Drawing.Point(138, 272);
             this.Nuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Nuevo.Name = "Nuevo";
             this.Nuevo.Size = new System.Drawing.Size(74, 65);
@@ -294,7 +278,7 @@ namespace CrearOtroRegistro
             this.Nuevo.Text = "Nuevo";
             this.Nuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Nuevo.UseVisualStyleBackColor = false;
-            this.Nuevo.Click += new System.EventHandler(this.Nuevo_Click_1);
+            this.Nuevo.Click += new System.EventHandler(this.NuevoButton_Click_1);
             // 
             // errorProvider1
             // 
@@ -307,7 +291,7 @@ namespace CrearOtroRegistro
             this.ClientSize = new System.Drawing.Size(672, 354);
             this.Controls.Add(this.idNumerico);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.FechadateTimePicker1);
             this.Controls.Add(this.textBoxClaveConfirm);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Eliminar);
@@ -324,12 +308,10 @@ namespace CrearOtroRegistro
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Editar);
             this.Controls.Add(this.Guardar);
             this.Controls.Add(this.Nuevo);
             this.Name = "Registro";
             this.Text = "Registro";
-            this.Load += new System.EventHandler(this.Registro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.idNumerico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -342,7 +324,7 @@ namespace CrearOtroRegistro
 
         private System.Windows.Forms.NumericUpDown idNumerico;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker FechadateTimePicker1;
         private System.Windows.Forms.TextBox textBoxClaveConfirm;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Eliminar;
@@ -359,7 +341,6 @@ namespace CrearOtroRegistro
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Editar;
         private System.Windows.Forms.Button Guardar;
         private System.Windows.Forms.Button Nuevo;
         private System.Windows.Forms.ErrorProvider errorProvider1;

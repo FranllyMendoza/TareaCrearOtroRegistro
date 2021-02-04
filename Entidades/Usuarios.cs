@@ -17,16 +17,6 @@ namespace CrearOtroRegistro.Entidades
         public string DescripcionRol { get; set; }
         public bool Activo { get; set; } = false;
 
-        public Usuarios()
-        {
-            UsuarioId = 0;
-            Clave = string.Empty;
-            FechaIngreso = DateTime.Now;
-            Alias = string.Empty;
-            Nombres = string.Empty;
-            Email = string.Empty;
-            DescripcionRol = string.Empty;
-            Activo = false;
-        }
+        
     }
 }

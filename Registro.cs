@@ -24,12 +24,12 @@ namespace CrearOtroRegistro
         private void Limpiar()
         {
             idNumerico.Value = 0;
-            textBoxNombres.Text = string.Empty;
-            textBoxAlias.Text = string.Empty;
-            textBoxClaveConfirm.Text = string.Empty;
-            textBoxEmail.Text = string.Empty;
+            textBoxNombres.Clear();
+            textBoxAlias.Clear();
+            textBoxClaveConfirm.Clear();
+            textBoxEmail.Clear();
             errorProvider1.Clear();
-            dateTimePicker1.CustomFormat = " ";
+            FechadateTimePicker1.CustomFormat = " ";
             textBoxClave.Clear();
             checkBoxActivo.Checked = false;
             comboBoxRol.Text = "Seleccionar";
@@ -43,7 +43,7 @@ namespace CrearOtroRegistro
             textBoxAlias.Text = usuarios.Alias;
             comboBoxRol.Text = usuarios.DescripcionRol;
             textBoxClave.Text = usuarios.Clave;
-            dateTimePicker1.Value = usuarios.FechaIngreso;
+            FechadateTimePicker1.Value = usuarios.FechaIngreso;
             checkBoxActivo.Checked = usuarios.Activo;
             textBoxClaveConfirm.Text = usuarios.Clave;
         }
@@ -55,7 +55,7 @@ namespace CrearOtroRegistro
             usuarios.Clave = textBoxClave.Text;
             usuarios.Email = textBoxEmail.Text;
             usuarios.Nombres = textBoxNombres.Text;
-            usuarios.FechaIngreso = dateTimePicker1.Value;
+            usuarios.FechaIngreso = FechadateTimePicker1.Value;
             usuarios.Alias = textBoxAlias.Text;
             usuarios.DescripcionRol = comboBoxRol.Text;
             usuarios.Activo = checkBoxActivo.Checked;
@@ -111,77 +111,23 @@ namespace CrearOtroRegistro
                 textBoxClaveConfirm.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(dateTimePicker1.Text))
+            if (string.IsNullOrWhiteSpace(FechadateTimePicker1.Text))
             {
-                errorProvider1.SetError(dateTimePicker1, "Debe agregar una fecha de registro");
-                dateTimePicker1.Focus();
+                errorProvider1.SetError(FechadateTimePicker1, "Debe agregar una fecha de registro");
+                FechadateTimePicker1.Focus();
                 paso = false;
             }
-            if (textBoxClave.Text != textBoxClaveConfirm.Text && textBoxClaveConfirm.Text != textBoxClave.Text)
+            if (textBoxClave.Text != textBoxClaveConfirm.Text)
             {
-                MessageBox.Show("La contraseña debe ser igual para ambos casos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errorProvider1.SetError(textBoxClaveConfirm, "La contraseña debe ser igual para ambos casos!");
                 paso = false;
             }
             return paso;
         }
 
 
-        private void Registro_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void idNumerico_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Editar_Click_1(object sender, EventArgs e)
-        {
-            Usuarios usuarios = new Usuarios();
-            bool paso = false;
-
-            if (!Validar())
-                return;
-            usuarios = LlenaClase();
-
-            if ((int)idNumerico.Value == 0)
-                paso = UsuariosBLL.Guardar(usuarios);
-            else
-            {
-                if (!ExisteEnLaBaseDeDatos())
-                {
-                    MessageBox.Show("No se puede modificar... El usuario no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                else
-                {
-                    DialogResult result = MessageBox.Show("Desea guardar los cambios?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-                    if (result == DialogResult.Yes)
-                    {
-                        Limpiar();
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        Limpiar();
-
-                        return;
-                    }
-                }
-                paso = UsuariosBLL.Modificar(usuarios);
-            }
-
-            if (paso)
-            {
-                Limpiar();
-                MessageBox.Show("Guardado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-                MessageBox.Show("No fue posible guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        private void Eliminar_Click_1(object sender, EventArgs e)
+       
+        private void EliminarButton_Click_1(object sender, EventArgs e)
         {
             errorProvider1.Clear();
 
@@ -196,7 +142,8 @@ namespace CrearOtroRegistro
                 errorProvider1.SetError(idNumerico, "No se puede eliminar ");
         }
 
-        private void Guardar_Click_1(object sender, EventArgs e)
+
+        private void GuardarButton_Click_1(object sender, EventArgs e)
         {
             Usuarios usuarios;
             bool paso = false;
@@ -226,14 +173,22 @@ namespace CrearOtroRegistro
             {
                 MessageBox.Show("No se pudo guardar, este usuario ya existe!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+
+
+
+
         }
 
-        private void Nuevo_Click_1(object sender, EventArgs e)
+        private void NuevoButton_Click_1(object sender, EventArgs e)
         {
             Limpiar();
         }
 
-        private void Buscar_Click_1(object sender, EventArgs e)
+
+
+        private void BuscarButton_Click_1(object sender, EventArgs e)
         {
             int id;
             Usuarios usuario = new Usuarios();
@@ -254,19 +209,15 @@ namespace CrearOtroRegistro
             }
         }
 
-        private void textBoxClave_TextChanged_1(object sender, EventArgs e)
+
+        private void FechadateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
-              
+            FechadateTimePicker1.CustomFormat = "dd / MM / yyyy";
         }
 
-        private void textBoxClaveConfirm_TextChanged_1(object sender, EventArgs e)
-        {
-             
-        }
 
-        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
-        {
-            dateTimePicker1.CustomFormat = "dd / MM / yyyy";
-        }
+
     }
+
+
 }
