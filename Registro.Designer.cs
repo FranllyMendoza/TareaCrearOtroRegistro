@@ -344,5 +344,6 @@ namespace CrearOtroRegistro
         private System.Windows.Forms.Button Guardar;
         private System.Windows.Forms.Button Nuevo;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+
     }
 }

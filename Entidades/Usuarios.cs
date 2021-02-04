@@ -18,5 +18,6 @@ namespace CrearOtroRegistro.Entidades
         public bool Activo { get; set; } = false;
 
         
+
     }
 }

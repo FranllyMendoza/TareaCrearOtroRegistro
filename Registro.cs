@@ -69,7 +69,6 @@ namespace CrearOtroRegistro
 
             return (usuarios != null);
         }
-
         
         private bool Validar()
         {
