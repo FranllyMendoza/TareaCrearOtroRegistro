@@ -10,14 +10,14 @@ namespace CrearOtroRegistro.BLL
 {
     class RolBLL
     {
-        public static RolBLL Buscar(int id)
+        public static Roll Buscar(int id)
         {
-            RolBLL Roll;
-            DAL.Contexto contexto = new Contexto();
+            Roll Roll;
+            Contexto contexto = new Contexto();
 
             try
             {
-                Roll = contexto.RollId.Find(id);
+                Roll = contexto.Rolles.Find(id);
             }
 
             catch (Exception)
@@ -32,15 +32,15 @@ namespace CrearOtroRegistro.BLL
             }
             return Roll;
         }
-        public static List<RolBLL> GetRoles()
+        public static List<Roll> GetRoles()
         {
-            List<RolBLL> lista = new List<RolBLL>();
+            List<Roll> lista = new List<Roll>();
 
             Contexto contexto = new Contexto();
 
             try
             {
-                lista = contexto.Roll.ToList();
+                lista = contexto.Rolles.ToList();
             }
             catch (Exception)
             {

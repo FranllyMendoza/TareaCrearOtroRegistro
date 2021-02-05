@@ -9,10 +9,10 @@ namespace CrearOtroRegistro.DAL
 {
     public class Contexto : DbContext 
     {
-        internal object RollId;
+        
 
         public DbSet<Usuarios> Usuarios { get; set; }
-        public DbSet<Roll> Rolls { get; set; }
+        public DbSet<Roll> Rolles { get; set; }
         
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

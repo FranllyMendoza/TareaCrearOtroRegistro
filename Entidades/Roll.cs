@@ -7,11 +7,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CrearOtroRegistro.Entidades
 {
-    class Roll
+    public class Roll
     {
         [Key]
         public int RollId { get; set; }
         public string Roles { get; set; }
+
     }
 }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CrearOtroRegistro.Entidades
 {
@@ -17,7 +18,9 @@ namespace CrearOtroRegistro.Entidades
         public string DescripcionRol { get; set; }
         public bool Activo { get; set; } = false;
 
-        
+
+        [ForeignKey("RolId")]
+        public virtual Roll roll { get; set; }
 
     }
 }
