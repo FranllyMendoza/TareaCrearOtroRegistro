@@ -9,8 +9,8 @@ namespace CrearOtroRegistro.DAL
 {
     public class Contexto : DbContext 
     {
-        
 
+        public DbSet<Permisos> Permisos { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Roll> Rolles { get; set; }
         
