@@ -36,16 +36,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ListadoDeUsuarioAgrupado.rpt</DependentUpon>
     </Compile>
-    <Compile Update="Reportes\RecivoUsuario.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>RecivoUsuario.rpt</DependentUpon>
-    </Compile>
-    <Compile Update="Reportes\RecivoUsuarioAgrupado.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>RecivoUsuarioAgrupado.rpt</DependentUpon>
-    </Compile>
   </ItemGroup>
 	
 
@@ -68,14 +58,6 @@
     <None Update="Reportes\ListadoDeUsuarioAgrupado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ListadoDeUsuarioAgrupado.cs</LastGenOutput>
-    </None>
-    <None Update="Reportes\RecivoUsuario.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RecivoUsuario.cs</LastGenOutput>
-    </None>
-    <None Update="Reportes\RecivoUsuarioAgrupado.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RecivoUsuarioAgrupado.cs</LastGenOutput>
     </None>
   </ItemGroup>
 	
